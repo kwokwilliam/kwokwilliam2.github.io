@@ -25,7 +25,7 @@
 <meta name="author" content="William Kwok">
 
 
-<meta name="date" content="2017-11-15">
+<meta name="date" content="2017-11-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="index.html">
-
+<link rel="next" href="tcj.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -63,17 +63,23 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">iGEM Wiki Necessities</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="addPage.html"><a href="addPage.html"><i class="fa fa-check"></i><b>2</b> Adding pages</a><ul>
-<li class="chapter" data-level="2.1" data-path="addPage.html"><a href="addPage.html#existingPage"><i class="fa fa-check"></i><b>2.1</b> Working off an existing page</a></li>
-<li class="chapter" data-level="2.2" data-path="addPage.html"><a href="addPage.html#blankPage"><i class="fa fa-check"></i><b>2.2</b> Creating a new blank page</a></li>
-<li class="chapter" data-level="2.3" data-path="addPage.html"><a href="addPage.html#template"><i class="fa fa-check"></i><b>2.3</b> Making a template for code</a></li>
-<li class="chapter" data-level="2.4" data-path="addPage.html"><a href="addPage.html#includingJSCSS"><i class="fa fa-check"></i><b>2.4</b> Including JavaScript and CSS</a></li>
-<li class="chapter" data-level="2.5" data-path="addPage.html"><a href="addPage.html#putTogether"><i class="fa fa-check"></i><b>2.5</b> Using templates to put them all together</a></li>
+<li class="chapter" data-level="2" data-path="addPage.html"><a href="addPage.html"><i class="fa fa-check"></i><b>2</b> Creating/editing wiki pages</a><ul>
+<li class="chapter" data-level="2.1" data-path="addPage.html"><a href="addPage.html#structure"><i class="fa fa-check"></i><b>2.1</b> Wiki pages structure</a></li>
+<li class="chapter" data-level="2.2" data-path="addPage.html"><a href="addPage.html#existingPage"><i class="fa fa-check"></i><b>2.2</b> Judged pages</a></li>
+<li class="chapter" data-level="2.3" data-path="addPage.html"><a href="addPage.html#blankPage"><i class="fa fa-check"></i><b>2.3</b> Creating a new blank page</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="tcj.html"><a href="tcj.html"><i class="fa fa-check"></i><b>3</b> Templates, CSS, and JavaScript</a><ul>
+<li class="chapter" data-level="3.1" data-path="tcj.html"><a href="tcj.html#template"><i class="fa fa-check"></i><b>3.1</b> Making a template for code</a></li>
+<li class="chapter" data-level="3.2" data-path="tcj.html"><a href="tcj.html#includingJSCSS"><i class="fa fa-check"></i><b>3.2</b> Including JavaScript and CSS</a></li>
+<li class="chapter" data-level="3.3" data-path="tcj.html"><a href="tcj.html#putTogether"><i class="fa fa-check"></i><b>3.3</b> Using templates to put them all together</a></li>
+<li class="chapter" data-level="3.4" data-path="tcj.html"><a href="tcj.html#overrideCSS"><i class="fa fa-check"></i><b>3.4</b> Overriding iGEM CSS</a></li>
+<li class="chapter" data-level="3.5" data-path="tcj.html"><a href="tcj.html#cache"><i class="fa fa-check"></i><b>3.5</b> Clearing cache</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="making-a-bookdown-book.html"><a href="making-a-bookdown-book.html"><i class="fa fa-check"></i><b>4</b> Making a bookdown book</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -95,21 +101,48 @@
 
             <section class="normal" id="section-">
 <div id="addPage" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Adding pages</h1>
+<h1><span class="header-section-number">Chapter 2</span> Creating/editing wiki pages</h1>
+<p>Before we can make a wiki, we have to know how to do basic edits to a page. You’d be surprised at how many things require special attention to modify on the wiki.</p>
+<p>If you’ve ever made your own website before, you may have had to just upload all the relevant files and immediately have a website that you could use. iGEM’s uses <strong>MediaWiki</strong>, which <strong>requires</strong> you to type in the HTML for every individual page. Controversially, a lot of web programmers dislike this model, because it increases complexity if they want to do complex stuff. However, note that using MediaWiki is a godsend for some teams that don’t have any knowledge of web programming. That is why there will likely be <em>no change</em> to this structure for years to come.</p>
+<p>For any demonstrations, all demonstration pages will use a page from <a href="http://2017.igem.org/Team:Washington">Team:Washington’s iGEM Wiki</a>. We will also be using Google Chrome as a web browser.</p>
+<div id="structure" class="section level2">
+<h2><span class="header-section-number">2.1</span> Wiki pages structure</h2>
+<p>The iGEM wiki is structured in a very straightforward manner.</p>
+<p><code>http://[YEAR].igem.org/Team:[TEAM]</code> will lead you to the main page. Take note that there is <strong>no backslash</strong> after this. If you have a backslash, then you will go to a blank uncreated page.</p>
+<p>There are many special pages that the judges take into consideration for determining what medal you will receive at the Jamboree. These pages can be found <a href="http://2017.igem.org/Judging/Pages_for_Awards">here</a>. For example, the <code>Attributions</code> page for your team will follow the structure <code>http://[YEAR].igem.org/Team:[TEAM]/Attributions</code>.</p>
+<p>Additionally, the human practices pages are a bit funky, but they follow the same structure, they just have a <code>/HP/</code> before them. You <em>shouldn’t</em> think about this as if it was a file pathway, but rather a page with the page title <code>/HP/Gold_Integrated</code> or so.</p>
+</div>
 <div id="existingPage" class="section level2">
-<h2><span class="header-section-number">2.1</span> Working off an existing page</h2>
+<h2><span class="header-section-number">2.2</span> Judged pages</h2>
+<p>All the special pages noted in section <a href="addPage.html#structure">2.1</a> will be an existing page for you to work on. It looks something like the following:</p>
+<div class="figure">
+<img src="existingPage.png" alt="Existing Page" />
+<p class="caption">Existing Page</p>
+</div>
+<p>For these pages, you simply have to follow these steps to modify the page:</p>
+<ol style="list-style-type: decimal">
+<li>Be logged in and make sure you are in your team registry (otherwise you won’t be allowed to edit the pages)</li>
+<li>Go to the top bar and find <code>wiki tools</code></li>
+<li>Hover over that and go to <code>edit page</code></li>
+<li>Modify the page as you like (Read below for more tips)</li>
+<li>Click <code>save</code>, and the page will be updated</li>
+</ol>
+<p>Note how there is a blue bordered <strong>ALERT</strong> box on this page. If you want to be evaluated for this award, you will <strong>have</strong> to remove (before a certain date) the <code>div</code> that houses this alert message. The code that you have to remove will look something like this:</p>
+<pre><code>&lt;div class=&quot;column full_size judges-will-not-evaluate&quot;&gt;
+&lt;h3&gt;★  ALERT! &lt;/h3&gt;
+&lt;p&gt;This page is used by the judges to evaluate your team for the &lt;a href=&quot;http://2017.igem.org/Judging/Medals&quot;&gt;medal criterion&lt;/a&gt; or &lt;a href=&quot;http://2017.igem.org/Judging/Awards&quot;&gt; award listed above&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt; Delete this box in order to be evaluated for this medal criterion and/or award. See more information at &lt;a href=&quot;http://2017.igem.org/Judging/Pages_for_Awards&quot;&gt; Instructions for Pages for awards&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>Remove <strong>all</strong> of the above code if you want to be considered for the award.</p>
 </div>
 <div id="blankPage" class="section level2">
-<h2><span class="header-section-number">2.2</span> Creating a new blank page</h2>
-</div>
-<div id="template" class="section level2">
-<h2><span class="header-section-number">2.3</span> Making a template for code</h2>
-</div>
-<div id="includingJSCSS" class="section level2">
-<h2><span class="header-section-number">2.4</span> Including JavaScript and CSS</h2>
-</div>
-<div id="putTogether" class="section level2">
-<h2><span class="header-section-number">2.5</span> Using templates to put them all together</h2>
+<h2><span class="header-section-number">2.3</span> Creating a new blank page</h2>
+<p>Creating a new page is very simple. First, type this into the navigation bar: <code>http://[YEAR].igem.org/Team:[TEAM]/[PAGE_YOU_WANT_TO_MAKE]</code>. In the next example, We will be creating a new page <code>NewPageTest</code>.</p>
+<ol style="list-style-type: decimal">
+<li>First, we head to <a href="http://2017.igem.org/Team:Washington/NewPageTest" class="uri">http://2017.igem.org/Team:Washington/NewPageTest</a> <br /> We should see something like this: <br /><br /><img src="createNew.png" alt="Create new page" /></li>
+<li>Go click on <code>edit this page</code> or go to <code>wiki tools</code> &gt; <code>edit</code></li>
+<li>Edit your heart out. HTML inside the edit box will appear as rendered HTML after saving.</li>
+</ol>
 
 </div>
 </div>
@@ -118,8 +151,8 @@
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tcj.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -148,10 +181,10 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-intro.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-addPages.Rmd",
 "text": "Edit"
 },
-"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"download": ["iGEM Wiki Necessities.pdf", "iGEM Wiki Necessities.epub"],
 "toc": {
 "collapse": "subsection"
 }

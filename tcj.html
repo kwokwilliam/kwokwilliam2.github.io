@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A guide to writing an iGEM Wiki</title>
+  <meta name="description" content="This is a book to teach you the ins and outs of writing a wiki page">
+  <meta name="generator" content="bookdown 0.5.10 and GitBook 2.6.7">
+
+  <meta property="og:title" content="A guide to writing an iGEM Wiki" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a book to teach you the ins and outs of writing a wiki page" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A guide to writing an iGEM Wiki" />
+  
+  <meta name="twitter:description" content="This is a book to teach you the ins and outs of writing a wiki page" />
+  
+
+<meta name="author" content="William Kwok">
+
+
+<meta name="date" content="2017-11-16">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="addPage.html">
+<link rel="next" href="making-a-bookdown-book.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">iGEM Wiki Necessities</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
+<li class="chapter" data-level="2" data-path="addPage.html"><a href="addPage.html"><i class="fa fa-check"></i><b>2</b> Creating/editing wiki pages</a><ul>
+<li class="chapter" data-level="2.1" data-path="addPage.html"><a href="addPage.html#structure"><i class="fa fa-check"></i><b>2.1</b> Wiki pages structure</a></li>
+<li class="chapter" data-level="2.2" data-path="addPage.html"><a href="addPage.html#existingPage"><i class="fa fa-check"></i><b>2.2</b> Judged pages</a></li>
+<li class="chapter" data-level="2.3" data-path="addPage.html"><a href="addPage.html#blankPage"><i class="fa fa-check"></i><b>2.3</b> Creating a new blank page</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="tcj.html"><a href="tcj.html"><i class="fa fa-check"></i><b>3</b> Templates, CSS, and JavaScript</a><ul>
+<li class="chapter" data-level="3.1" data-path="tcj.html"><a href="tcj.html#template"><i class="fa fa-check"></i><b>3.1</b> Making a template for code</a></li>
+<li class="chapter" data-level="3.2" data-path="tcj.html"><a href="tcj.html#includingJSCSS"><i class="fa fa-check"></i><b>3.2</b> Including JavaScript and CSS</a></li>
+<li class="chapter" data-level="3.3" data-path="tcj.html"><a href="tcj.html#putTogether"><i class="fa fa-check"></i><b>3.3</b> Using templates to put them all together</a></li>
+<li class="chapter" data-level="3.4" data-path="tcj.html"><a href="tcj.html#overrideCSS"><i class="fa fa-check"></i><b>3.4</b> Overriding iGEM CSS</a></li>
+<li class="chapter" data-level="3.5" data-path="tcj.html"><a href="tcj.html#cache"><i class="fa fa-check"></i><b>3.5</b> Clearing cache</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="making-a-bookdown-book.html"><a href="making-a-bookdown-book.html"><i class="fa fa-check"></i><b>4</b> Making a bookdown book</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A guide to writing an iGEM Wiki</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tcj" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Templates, CSS, and JavaScript</h1>
+<div id="template" class="section level2">
+<h2><span class="header-section-number">3.1</span> Making a template for code</h2>
+<p>A <strong>template</strong> is a page you can use for many things. These templates can contain HTML or even just plaintext code. The advantage of having these templates is that you can basically source in everything from a template into a regular page.</p>
+<p>To create a template page, it is the exact same as making a blank page from <a href="addPage.html#blankPage">2.3</a>. You wouldn’t know the difference.</p>
+<ul>
+<li>To get to a template page, you use the format <code>http://[YEAR].igem.org/Template:[TEAM]/[TEMPLATE]</code>.</li>
+<li>To use the template in your actual page, you use <code>{{[TEAM]/[TEMPLATE]}}</code></li>
+</ul>
+<p>So for example, here are the steps to making a template page and including it into a regular page:</p>
+<ul>
+<li>Going to a blank template page: <a href="http://2017.igem.org/Template:Washington/TestPage" class="uri">http://2017.igem.org/Template:Washington/TestPage</a></li>
+<li>Now let us just add a simple <code>&lt;html&gt;&lt;strong&gt;Testinput&lt;/strong&gt;&lt;/html&gt;</code> to the page, which should output a bolded “<strong>Testinput</strong>” onto an almost blank page</li>
+<li>To include this onto the NewPageTest that we made in <a href="addPage.html#blankPage">2.3</a>, we <code>edit</code> the page and simply type <code>{{Washington/TestPage}}</code>. We find that NewPageTest now looks exactly like the TestPage template.</li>
+<li>Don’t worry about the page still having “Team:Washington” or the iGEM logos on it. Read on to learn how to get rid of these.</li>
+</ul>
+</div>
+<div id="includingJSCSS" class="section level2">
+<h2><span class="header-section-number">3.2</span> Including JavaScript and CSS</h2>
+<p>Now that you have a grasp of how templates work, you can simply copy paste your CSS or JavaScript <strong>directly</strong> into a blank template, and click save.</p>
+<p><strong>HOWEVER</strong>, there is a very niche way to get the code from the template <em>correctly</em> and incorporate it into your page. You may find major errors if you just wrap the code in <code>&lt;style&gt;</code> or <code>&lt;script&gt;</code> tags. (One example is that MediaWiki does not parse the <code>&amp;</code> symbol correctly, so if you have <code>&amp;&amp;</code> anywhere in the code, it will break. This is crucial for using jQuery or Bootstrap API)</p>
+<p><strong>The correct way to incorporate code</strong>:</p>
+<ul>
+<li>Take your template link: <code>http://[YEAR].igem.org/Template:[TEAM]/[TEMPLATE]</code></li>
+<li>Add <code>?action=raw&amp;ctype=text/[CSS OR JAVASCRIPT]</code> where <code>[CSS OR JAVASCRIPT]</code> is <code>css</code> or <code>javascript</code> depending on what type of code is in the template.</li>
+<li>Incorporate it into an actual page with <code>script</code> or <code>style</code> tags like so: <br/><code>&lt;link href=&quot;http://[YEAR].igem.org/Template:[TEAM]/[TEMPLATE]?action=raw&amp;ctype=text/css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;</code> or <br /> <code>&lt;script src=&quot;http://[YEAR].igem.org/Template:[TEAM]/[TEMPLATE]?action=raw&amp;ctype=text/javascript&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
+<p>Those two lines of code provided at the end of those steps will act exactly like incorporating a local JavaScript/CSS file or using a CDN.</p>
+</div>
+<div id="putTogether" class="section level2">
+<h2><span class="header-section-number">3.3</span> Using templates to put them all together</h2>
+<p>You don’t have to follow this guide entirely, but what we’ve been doing with our wiki is putting all the stuff you’d normally put in the header of an HTML page into a template, so that way all we would have to do is put in the template caller (<code>{{[TEAM]/[TEMPLATE]}}</code>) and then our body content inside <code>&lt;html&gt;&lt;/html&gt;</code>. Here is an example of what we have in our <a href="http://2017.igem.org/Template:Washington/Includes">Template:Includes</a>– you can modify this for any CSS or JavaScript you want to include.</p>
+<pre><code>&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;Washington iGEM&lt;/title&gt;
+        &lt;!--
+            &lt;link href=&quot;&quot; type=&quot;image/gif&quot; rel=&quot;shortcut icon&quot; /&gt;
+            --&gt;
+
+                &lt;meta name=&quot;theme-color&quot; content=&quot;#4B2E83&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+
+        &lt;!-- Bootstrap requirements --&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no&quot;&gt;
+        &lt;link href=&quot;http://2017.igem.org/Template:Washington/BootstrapCSS?action=raw&amp;ctype=text/css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;script src=&quot;http://2017.igem.org/Template:Washington/JQuery?action=raw&amp;ctype=text/javascript&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;http://2017.igem.org/Template:Washington/Popper?action=raw&amp;ctype=text/javascript&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;http://2017.igem.org/Template:Washington/BootstrapJS?action=raw&amp;ctype=text/javascript&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+                &lt;script src=&quot;http://2017.igem.org/Template:Washington/ChartJS?action=raw&amp;ctype=text/javascript&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- Animations --&gt;
+        &lt;link href=&quot;http://2017.igem.org/Template:Washington/Animate?action=raw&amp;ctype=text/css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+
+        &lt;!-- Team Washington includings --&gt;
+        &lt;link href=&quot;http://2017.igem.org/Template:Washington/GlobalCSS?action=raw&amp;ctype=text/css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;script src=&quot;http://2017.igem.org/Template:Washington/GlobalJS?action=raw&amp;ctype=text/javascript&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+    &lt;/head&gt;
+&lt;/html&gt;</code></pre>
+<p>Then, on a page like the one we made in section <a href="addPage.html#blankPage">2.3</a> we have the following code:</p>
+<pre><code>{{Washington/Includes}}
+&lt;html&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Even though you have your own CSS and JavaScript on the page doesn’t mean you’re ready yet. Read on to learn about overriding iGEM’s default CSS.</p>
+</div>
+<div id="overrideCSS" class="section level2">
+<h2><span class="header-section-number">3.4</span> Overriding iGEM CSS</h2>
+<p>Perhaps one of the most <strong>frustrating but important</strong> part of working with iGEM’s MediaWiki system is overriding their default CSS. No matter how much you try to override, sometimes there will still be minute bugs due to not overriding part of the code. At the bottom of this section, there is a code that you simply need to copy paste into a new template (<a href="tcj.html#template">3.1</a>) to override a good amount of iGEM CSS.</p>
+<p>For things that aren’t yet overridden and are causing errors, you will need to:</p>
+<ul>
+<li>Right click on the element that is bugging up</li>
+<li>Inspect - This will pop up an inspection window. Under elements you will see a window for HTML, CSS of the selected element, and box model of the selected element.<br/><img src="inspectPanel.png" alt="Inspection pane" /></li>
+<li>In the above, for example, let’s say we want to delete this from showing.</li>
+<li>In a custom CSS Template (<a href="tcj.html#template">3.1</a>) we override the class by putting the same class name.</li>
+</ul>
+<pre><code>#top_title {
+  display: none;
+  width: 0px;
+}</code></pre>
+<p>The final step will require the most problem solving skills to figure out what is being overridden. It takes time to get a feel for what exactly is wrong. Thankfully, you’ll encounter this problem the least with the following override code:</p>
+<pre><code>#sideMenu,
+#top_title {
+  display: none;
+  width: 0px;
+}
+#bodyContent a[href ^=&quot;https://&quot;], .link-https {
+  padding-right: 0px;
+}
+#content {
+  width: 100%;
+  padding: 0px;
+  border: none;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  position: relative;
+}
+#globalWrapper {
+  padding-bottom: 0;
+  font-size: 100%;
+}
+#top_menu_under {
+  height: 0px;
+}
+#top_menu_14 {
+  height: 22px;
+}
+#HQ_page h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: INSERTFONT, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+  font-weight: normal;
+  padding: 0px;
+  line-height: normal;
+  }
+#HQ_page p {
+  font-family: INSERTFONT, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+  text-align: left;
+  font-size: 1.25rem;
+}
+#top_menu_inside #user_item {
+  float: left;
+  padding-top: 0px;
+  margin-right: none;
+}
+#bodyContent a[href ^=&quot;mailto:&quot;], .link-mailto {
+    padding-right: 0px;
+    background: none;
+}</code></pre>
+<p>Though, your job isn’t done there. You’ll want to mess around with that code to change what fonts you’re using.</p>
+</div>
+<div id="cache" class="section level2">
+<h2><span class="header-section-number">3.5</span> Clearing cache</h2>
+<blockquote>
+<p>“Why did the page stay the same???? I updated my CSS and JavaScript but the functionality and looks aren’t changing!”</p>
+</blockquote>
+<p>My friend, you’ll want to learn about a magical thing called clearing your cache. The cache is a temporary storage for web browsers that allows the web page to be loaded faster. Things like images, CSS, JavaScript, etc. all get stored in cache so the next time the page is loaded, it will load faster.</p>
+<p><strong>Easy way to clear cache</strong>: You can go to your browser settings and clear the cache, or you can also go to <code>F12 (or right click &gt; inspect)</code> &gt; <code>top right corner 3 dots</code> &gt; <code>settings</code> &gt; <code>scroll down to network</code> &gt; <code>Disable cache (while DevTools is open)</code></p>
+<p>Now, whenever you press <code>F12</code> on your keyboard to bring up the inspect panel, then refresh the page, the cache for the page will instantly be cleared and you will have the latest update of the page.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="addPage.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="making-a-bookdown-book.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-templates.Rmd",
+"text": "Edit"
+},
+"download": ["iGEM Wiki Necessities.pdf", "iGEM Wiki Necessities.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
